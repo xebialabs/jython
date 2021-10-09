@@ -1217,8 +1217,13 @@ class _realsocket(object):
         log.debug("Sent data <<<{!r:.20}>>>".format(sent_data), extra={"sock": self})
 
         return len(sent_data)
-
-    sendall = send   # FIXME see note above!
+    
+    def sendall(self, data, flags=0):
+        chunk_size = 8192
+        total_sent = 0
+        while total_sent < len(data):
+            sent = self.send(data[total_sent:total_sent + chunk_size], flags=flags)
+            total_sent += sent
 
     def _get_incoming_msg(self, reason):
         log.debug("head=%s incoming=%s" % (self.incoming_head, self.incoming), extra={"sock": self})
