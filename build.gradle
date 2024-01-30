@@ -156,7 +156,7 @@ dependencies {
     antlr 'org.antlr:antlr:3.5.2'
     implementation 'org.antlr:antlr-runtime:3.5.2'
 
-    implementation 'org.apache.commons:commons-compress:1.25.0'
+    implementation 'org.apache.commons:commons-compress:1.22'
 
     implementation 'org.bouncycastle:bcpkix-jdk15on:1.62'
     implementation 'org.bouncycastle:bcprov-jdk15on:1.62'
@@ -166,7 +166,7 @@ dependencies {
     implementation 'org.ow2.asm:asm-util:7.1'
 
     // The Android Guava and "failureaccess" are necessary to support Java 7.
-    implementation 'com.google.guava:guava:33.0.0-android'
+    implementation 'com.google.guava:guava:28.0-android'
     implementation 'com.google.guava:failureaccess:1.0.1'
     // Swap for regular Guava at Java 8.
 
