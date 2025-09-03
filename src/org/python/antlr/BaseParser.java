@@ -19,8 +19,8 @@ public class BaseParser {
     
     public BaseParser(CharStream stream, String filename, CompilerFlags flags) {
         this(stream, filename, flags.encoding, false,
-             flags.isFlagSet(CodeFlag.CO_FUTURE_PRINT_FUNCTION),
-             flags.isFlagSet(CodeFlag.CO_FUTURE_UNICODE_LITERALS));
+             false, //Disable setting future print compile flag - flags.isFlagSet(CodeFlag.CO_FUTURE_PRINT_FUNCTION),
+             false); //Disable setting future Unicode compile flag - flags.isFlagSet(CodeFlag.CO_FUTURE_UNICODE_LITERALS));
     }
 
     public BaseParser(CharStream stream, String filename, String encoding) {
